@@ -1,10 +1,9 @@
-# ngl view for jupyter
-jupyter nbextension install nglview --py --sys-prefix
-jupyter nbextension enable nglview --py --sys-prefix
-
-# ngl view for jupyter lab
-jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
-jupyter labextension install nglview-js-widgets
+# Install everything with mamba
+mamba install -c conda-forge python=3.7.6
+mamba install -c conda-forge pyiron=0.2.17
+mamba install -c conda-forge sphinxdft=2.6.1
+mamba install -c conda-forge lammps=2020.03.03
+mamba install -c conda-forge seaborn=0.10.1
 
 # pyiron setup
 printf "[DEFAULT]\nTOP_LEVEL_DIRS = ${HOME}\nRESOURCE_PATHS = /srv/conda/envs/notebook/share/pyiron" > ${HOME}/.pyiron
